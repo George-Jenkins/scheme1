@@ -60,3 +60,22 @@
  (eval (cons '+ equation) ns)
 
 );define sum-up-numbers-general
+
+
+(define (min-above-min L1 L2) 
+  
+  (define (allNums L)
+    (if (null? L)
+      L
+      
+    );if
+  );define
+
+  (define l1 (allNums L1))
+  (define l2 (allNums L2))
+
+  
+
+);define
+
+
