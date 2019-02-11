@@ -13,3 +13,13 @@
   )))
   
 );
+
+(define (sum-up-numbers-simple L) 
+
+ (define (newLst L)
+  (if (null? L) L
+  );if
+ );define
+
+
+);define sum-up-numbers-simple
