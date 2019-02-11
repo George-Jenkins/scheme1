@@ -67,7 +67,12 @@
   (define (allNums L)
     (if (null? L)
       L
-      
+      (append (allNums(cdr L)) 
+        (if (number? (car L))
+        (list (car L))
+        '()
+        );if
+      );append
     );if
   );define
 
