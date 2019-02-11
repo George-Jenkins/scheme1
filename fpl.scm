@@ -18,8 +18,20 @@
 
  (define (newLst L)
   (if (null? L) L
+  (append 
+  
+  (newLst (cdr L))
+
+  (if (number? (car L)) (list (car L))
+    '(0)
+  );if
+
+  );append
   );if
  );define
 
+ (define equation (newLst L))
+ (eval (cons '+ equation) ns)
 
+  
 );define sum-up-numbers-simple
