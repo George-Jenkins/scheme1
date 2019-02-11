@@ -96,6 +96,21 @@
     ((null? l2) (findLowest l1))
     ((not (null? l2))
 
+
+      (define L2Low (findLowest l2))
+
+
+  (define (remove x ls)
+  (if (null? ls)
+      '()
+      (let ((h (car ls)))
+        ((if (eqv? x h)
+            (lambda (y) y)
+            (lambda (y) (cons h y)))
+         (remove x (cdr ls))))))
+
+    
+    
      
      ))
 );define
