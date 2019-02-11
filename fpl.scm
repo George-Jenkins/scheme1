@@ -110,7 +110,17 @@
          (remove x (cdr ls))))))
 
     
-    
+    (define (findAnswer L lowNum)
+    (if (null? L) "#F"
+      (if (>= lowNum (findLowest L))
+        (findAnswer (remove (findLowest L) L) lowNum)
+        (findLowest L)
+      );if
+    );if
+    );define
+
+
+  (findAnswer l1 L2Low)
      
      ))
 );define
