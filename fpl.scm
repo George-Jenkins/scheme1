@@ -79,7 +79,13 @@
   (define l1 (allNums L1))
   (define l2 (allNums L2))
 
-  
+  (define (findLowest lst)
+    (if (null? (cdr lst))
+      (car lst)
+      (if (< (car lst) (findLowest (cdr lst))) 
+      );if
+    );if
+  );define
 
 );define
 
