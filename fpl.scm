@@ -35,3 +35,28 @@
 
   
 );define sum-up-numbers-simple
+
+
+
+(define (sum-up-numbers-general L) 
+
+ (define (newLst L)
+  (if (null? L) L
+  (append 
+  
+  (newLst (cdr L))
+
+  (cond 
+    ((number? (car L)) (list (car L)))
+    ((list? (car L)) (newLst (car L)))
+    (else '(0))
+  );cond
+
+  );append
+  );if
+ );define
+
+ (define equation (newLst L))
+ (eval (cons '+ equation) ns)
+
+);define sum-up-numbers-general
