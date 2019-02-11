@@ -89,6 +89,15 @@
     );if
   );define
 
+
+  (cond 
+
+    ((null? l1) "#F")
+    ((null? l2) (findLowest l1))
+    ((not (null? l2))
+
+     
+     ))
 );define
 
 
