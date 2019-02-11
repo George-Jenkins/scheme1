@@ -83,6 +83,8 @@
     (if (null? (cdr lst))
       (car lst)
       (if (< (car lst) (findLowest (cdr lst))) 
+        (car lst)
+        (findLowest (cdr lst))
       );if
     );if
   );define
